@@ -21,10 +21,13 @@ import BannerWrapper, {
   ImageWrapper,
 } from './banner.style';
 
+
 import { client } from 'common/data/Podplug';
 
 import microsoft from 'common/assets/image/Podplug/envato-icon.png';
 import bannerImg from 'common/assets/image/Podplug/banner2.png';
+import bannerGif from 'common/assets/image/Podplug/banner.gif';
+
 import videoBanner1 from 'common/assets/image/Podplug/video-1.png';
 import videoBanner2 from 'common/assets/image/Podplug/video-2.png';
 import circleBorder from 'common/assets/image/Podplug/shape.svg';
@@ -69,6 +72,15 @@ const Banner = () => {
     });
   };
   return (
+    <div style={{
+      border: 'solid 5px',
+      backgroundImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Giraffe_Mikumi_National_Park.jpg/330px-Giraffe_Mikumi_National_Park.jpg',
+      width: "100%",
+      zIndex: 15,
+      height: '800px',
+      backgroundRepeat: "no-repeat",
+      backgroundSize: "cover"
+    }}>
     <BannerWrapper id="home">
       <Container>
         <BannerContent>
@@ -132,6 +144,7 @@ const Banner = () => {
         alt="Bottom Circle"
       />
     </BannerWrapper>
+    </div>
   );
 };
 

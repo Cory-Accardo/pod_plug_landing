@@ -177,34 +177,67 @@ export const VideoWrapper = styled.div`
   }
 `;
 export const CustomerWrapper = styled.div`
-  max-width: 850px;
-  padding: 0px 0 70px;
+  margin: -1% 0 0 0;
   width: 100%;
-  margin: 0 auto;
   display: flex;
   align-items: center;
+  box-shadow: 5px 7px #d1d1e0;
+  background-color: #08457D;
+
+
+
+  @media only screen and (max-width: 3840px) {
+    padding: 55px 0 55px 25%;
+  }
+
+  @media only screen and (max-width: 1920px) {
+    padding: 55px 0 55px 21%;
+  }
+
   @media only screen and (max-width: 1440px) {
-    padding: 0px 0 55px;
+    padding: 55px 0 55px 21%;
   }
   @media only screen and (max-width: 1099px) {
     padding: 55px 0 55px;
-    max-width: 920px;
   }
   @media only screen and (max-width: 991px) {
-    padding: 40px 0;
+    padding: 20px 0;
   }
   @media only screen and (max-width: 600px) {
-    padding: 25px 0 40px;
+    margin: -2% 0 0 0;
+    padding: 5px 0;
   }
 
   p {
     margin: 0 12px 0 0;
-    color: ${themeGet('colors.menu', '#0D233E')};
+    color: ${themeGet('colors.menu', '#ffff')};
     @media only screen and (max-width: 991px) {
       display: none;
     }
   }
 `;
+
+export const VideoBannerWrapper = styled.div`
+
+
+background-image: -moz-linear-gradient(
+  139deg,
+  rgb(100, 43, 115) 0%,
+  rgb(198, 66, 110) 100%
+);
+background-image: -webkit-linear-gradient(
+  139deg,
+  rgb(100, 43, 115) 20%,
+  rgb(8, 69, 125) 100%
+);
+background-image: -ms-linear-gradient(
+  139deg,
+  rgb(100, 43, 115) 0%,
+  rgb(198, 66, 110) 100%
+);
+
+`;
+
 
 export const ImageWrapper = styled.div`
   display: flex;
@@ -217,6 +250,8 @@ export const ImageWrapper = styled.div`
   img {
     margin: 0 12px;
     @media only screen and (max-width: 667px) {
+      max-height: 50px;
+      max-width: 70px;  
       margin: 5px 10px;
     }
   }

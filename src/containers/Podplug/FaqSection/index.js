@@ -17,6 +17,7 @@ import { Icon } from 'react-icons-kit';
 import { thinDown } from 'react-icons-kit/entypo/thinDown';
 import { thinRight } from 'react-icons-kit/entypo/thinRight';
 import FaqSectionWrapper from './faqSection.style';
+import { SectionHeader } from '../Podplug.style';
 
 import { Faq } from 'common/data/Podplug';
 
@@ -29,9 +30,13 @@ const FaqSection = ({
 }) => {
   return (
     <FaqSectionWrapper id="faqSection">
+          <SectionHeader>
+              <Heading as="h5" content="Lorem Ipsum" />
+              <Heading content="Commonly asked questions" />
+          </SectionHeader>
+
       <Container>
         <Box {...sectionHeader} className="sectionHeader">
-          <Text content="Commonly asked questions:" {...sectionSubTitle} />
           <Heading
             content="Lorem ipsum dolor sit amet consectetur adipisicing elit sed eiu Lorem ipsum dolor Lorem ipsum dolor"
             {...sectionTitle}

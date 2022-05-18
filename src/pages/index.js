@@ -13,7 +13,7 @@ import Testimonial from 'containers/Podplug/Testimonial';
 import Footer from 'containers/Podplug/Footer';
 import FaqSection from 'containers/Podplug/FaqSection';
 import ContactSection from '../containers/Podplug/Contact';
-
+import VideoBanner from '../containers/VideoBanner';
 
 import GlobalStyle, {
   AppWrapper,
@@ -49,7 +49,7 @@ const Podplug = () => {
             <Navbar />
           </Sticky>
           <ContentWrapper>
-            <Banner />
+            <VideoBanner/>
             <Features />
             <FaqSection/>
             <AppSlider />
