@@ -74,7 +74,6 @@ const Banner = () => {
   return (
     <div style={{
       border: 'solid 5px',
-      backgroundImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Giraffe_Mikumi_National_Park.jpg/330px-Giraffe_Mikumi_National_Park.jpg',
       width: "100%",
       zIndex: 15,
       height: '800px',
@@ -107,18 +106,6 @@ const Banner = () => {
               />
             </ButtonGroup>
           </Fade>
-          {/* <VideoGroup>
-            <NextImage
-              src={videoBanner1}
-              onClick={handleVideoModal}
-              alt="Microsoft"
-            />
-            <NextImage
-              src={videoBanner2}
-              onClick={handleVideoModal}
-              alt="Microsoft"
-            />
-          </VideoGroup> */}
         </BannerContent>
         <BannerImage>
           <Fade up delay={100}>
@@ -127,7 +114,7 @@ const Banner = () => {
         </BannerImage>
       </Container>
       <CustomerWrapper>
-        <Text content="In collaboration with:" />
+        <div style={{opacity: 0.7}}> In collaboration with: </div>
         <ImageWrapper>
           {client.map((item) => (
             <Image

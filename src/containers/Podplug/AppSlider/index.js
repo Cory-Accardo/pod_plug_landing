@@ -22,7 +22,7 @@ const AppSlider = () => {
   };
 
   return (
-    <SectionWrapper>
+    <SectionWrapper id="rewards">
       <Container>
         <CarouseWrapper>
           <GlideCarousel

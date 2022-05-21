@@ -29,7 +29,7 @@ const FaqSection = ({
   descriptionStyle,
 }) => {
   return (
-    <FaqSectionWrapper id="faqSection">
+    <FaqSectionWrapper id="faq">
           <SectionHeader>
               <Heading as="h5" content="Lorem Ipsum" />
               <Heading content="Commonly asked questions" />

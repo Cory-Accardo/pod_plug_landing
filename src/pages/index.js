@@ -54,7 +54,7 @@ const Podplug = () => {
             <FaqSection/>
             <AppSlider />
             <Testimonial />
-            <TeamPortfolio />
+            {/* <TeamPortfolio /> */}
             <ContactSection/>
           </ContentWrapper>
           <Footer />

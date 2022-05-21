@@ -3,31 +3,39 @@
 /* ------------------------------------ */
 import logo from 'common/assets/image/Podplug/logo.png';
 
+export const rewardLink = 'http://localhost:5000'
+
 export const navbar = {
   logo: logo,
   navMenu: [
     {
       id: 1,
-      label: 'Home',
-      path: '#home',
-      offset: '84',
-    },
-    {
-      id: 2,
-      label: 'The Process',
+      label: 'Onboarding',
       path: '#features',
       offset: '81',
     },
     {
+      id: 2,
+      label: 'FAQ',
+      path: '#faq',
+      offset: '81',
+    },
+    {
       id: 3,
-      label: 'Testimonial',
+      label: 'Rewards',
+      path: '#rewards',
+      offset: '81',
+    },
+    {
+      id: 4,
+      label: 'Testimonials',
       path: '#testimonial',
       offset: '81',
     },
     {
       id: 5,
-      label: 'Team Members',
-      path: '#team',
+      label: 'Contact',
+      path: '#contact',
       offset: '81',
     },
   ],

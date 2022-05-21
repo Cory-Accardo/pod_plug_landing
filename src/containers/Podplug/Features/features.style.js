@@ -5,10 +5,10 @@ const SectionWrapper = styled.section`
   padding: 105px 0 75px;
   overflow: hidden;
   @media only screen and (max-width: 1440px) {
-    padding: 50px 0;
+    padding: 10px 0;
   }
   @media only screen and (max-width: 667px) {
-    padding: 45px 0;
+    padding: 10px 0;
   }
 `;
 

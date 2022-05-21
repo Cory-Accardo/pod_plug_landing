@@ -14,6 +14,8 @@ import FooterArea, {
   CopyrightText,
 } from './footer.style';
 
+import logoImg from '../../../common/assets/image/Podplug/logo.png'
+
 import { footer } from 'common/data/Podplug';
 
 const Footer = () => {
@@ -24,21 +26,11 @@ const Footer = () => {
   return (
     <FooterArea>
       <Container>
-        <WidgetArea>
-          {widgets.map((item) => (
-            <Box className="col" key={`footer-widget--key${item.id}`}>
-              <Image src={item.icon?.src} alt={item.title} />
-              <Heading as="h3" content={item.title} />
-              <Text content={item.description} />
-            </Box>
-          ))}
-        </WidgetArea>
-        {/* End of footer widgets area */}
         <MenuArea>
           <Logo
             className="logo"
             href="/appclassic"
-            logoSrc={logo}
+            logoSrc={logoImg}
             title="App Classic"
           />
           <Menu>
@@ -50,9 +42,14 @@ const Footer = () => {
               </MenuItem>
             ))}
           </Menu>
-          <CopyrightText>Copyright {year} By RedQ Inc</CopyrightText>
+          <CopyrightText>
+            We provide convenience to bars and venues throughout the US
+          </CopyrightText>
+          <CopyrightText>
+            No cost. No risk. Only sales.
+          </CopyrightText>
+
         </MenuArea>
-        {/* End of footer menu area */}
       </Container>
     </FooterArea>
   );

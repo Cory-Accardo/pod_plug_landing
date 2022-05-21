@@ -8,7 +8,6 @@ import { client } from 'common/data/AppModern';
 const Customer = () => {
   return (
     <CustomerWrapper>
-      <Text content="Trusted by companies like:" />
       <ImageWrapper>
         {client.map((item) => (
           <Image

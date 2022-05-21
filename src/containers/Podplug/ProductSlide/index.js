@@ -17,6 +17,7 @@ import ProductSlideWrapper, {
 
 import { productData } from 'common/data/Podplug';
 import SlideMockup from 'common/assets/image/Podplug/screen.png';
+import SectionWrapper from '../Features/features.style';
 const params = {
   slidesPerView: 5,
   centeredSlides: true,
@@ -53,6 +54,7 @@ const ProductSlide = () => {
     setLoading(true);
   }, []);
   return (
+    <SectionWrapper id="rewards">
     <ProductSlideWrapper>
       <Container>
         <SectionHeader>
@@ -89,6 +91,7 @@ const ProductSlide = () => {
         {/* End of carousel section */}
       </Container>
     </ProductSlideWrapper>
+    </SectionWrapper>
   );
 };
 

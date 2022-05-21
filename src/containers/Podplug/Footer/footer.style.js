@@ -2,14 +2,15 @@ import styled from 'styled-components';
 import { themeGet } from '@styled-system/theme-get';
 
 const FooterArea = styled.footer`
-  padding: 96px 0 60px;
+  padding: 40px 0 60px;
   background-color: ${themeGet('colors.secondary', '#09142E')};
   @media only screen and (max-width: 1366px) {
-    padding-top: 80px;
+    padding-top: 50px;
   }
   @media only screen and (max-width: 667px) {
-    padding-top: 80px;
+    padding-top: 30px;
     padding-bottom: 50px;
+    text-align: center;
   }
   .logo {
     img {

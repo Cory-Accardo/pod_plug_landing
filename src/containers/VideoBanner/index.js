@@ -7,6 +7,7 @@ import { client } from 'common/data/Podplug';
 import Text from 'common/components/Text';
 import LegacyImage from 'common/components/Image';
 import { useState } from 'react';
+import useWindowSize from '../../common/hooks/useWindowSize';
 
 
 
@@ -14,25 +15,6 @@ const Banner = () => {
 
     const size = useWindowSize();
 
-    // Hook
-    function useWindowSize() {
-        const [windowSize, setWindowSize] = useState({
-        width: undefined,
-        height: undefined,
-        });
-        useEffect(() => {
-        function handleResize() {
-            setWindowSize({
-            width: window.innerWidth,
-            height: window.innerHeight,
-            });
-        }
-        window.addEventListener("resize", handleResize);
-        handleResize();
-        return () => window.removeEventListener("resize", handleResize);
-        }, []); 
-        return windowSize;
-    }
 
     function determineSize(){
         if(size.width < 450){

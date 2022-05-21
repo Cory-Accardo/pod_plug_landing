@@ -10,6 +10,9 @@ const SectionWrapper = styled.div`
   }
   @media only screen and (max-width: 1024px) {
     padding: 30px 0 60px;
+    h2{
+      text-align: center;
+    }
   }
   @media only screen and (max-width: 667px) {
     padding: 45px 0;

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { themeGet } from '@styled-system/theme-get';
 
 const FaqSectionWrapper = styled.section`
-  padding: 40px 0 65px;
+  padding: 0 0 65px;
   overflow: hidden;
   @media (max-width: 768px) {
     padding: 60px 0 15px;

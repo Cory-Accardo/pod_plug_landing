@@ -16,6 +16,8 @@ import NavbarWrapper, { MenuArea, MobileMenu, Search } from './navbar.style';
 import LogoImage from 'common/assets/image/Podplug/logo-white.png';
 import LogoImageAlt from 'common/assets/image/Podplug/logo.png';
 
+import {rewardLink} from '../../../common/data/Podplug/index'
+
 
 
 import { navbar } from 'common/data/Podplug';
@@ -89,23 +91,7 @@ const Navbar = () => {
           <ScrollSpyMenu className="menu" menuItems={navMenu} offset={-84} />
           {/* end of main menu */}
 
-          <a href="https://www.podplug.com/login"><Button className="trail" title="Access Rewards" /></a>
-
-          <Button
-            className="menubar"
-            icon={
-              state.mobileMenu ? (
-                <Icon className="bar" icon={x} />
-              ) : (
-                <Fade>
-                  <Icon className="close" icon={menu} />
-                </Fade>
-              )
-            }
-            color="#0F2137"
-            variant="textButton"
-            onClick={() => toggleHandler('menu')}
-          />
+          <a style={{boxShadow: '6px 6px 10px #A6319D'}} href={rewardLink}><Button title="Access Rewards" /></a>
         </MenuArea>
       </Container>
 
@@ -130,7 +116,7 @@ const Navbar = () => {
               </li>
             ))}
           </Scrollspy>
-          <a href="https://www.podplug.com/login"><Button title="Access Rewards" /></a>
+          <a href={rewardLink}><Button title="Access Rewards" /></a>
         </Container>
       </MobileMenu>
       {/* end of mobile menu */}

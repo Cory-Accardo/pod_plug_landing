@@ -3,7 +3,7 @@ import { themeGet } from '@styled-system/theme-get';
 
 const CustomerWrapper = styled.div`
   max-width: 810px;
-  padding: 37px 0;
+  padding: 30px 0;
   width: 100%;
   margin: 0 auto;
   display: flex;

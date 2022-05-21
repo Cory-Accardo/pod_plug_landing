@@ -6,6 +6,7 @@ import Heading from 'common/components/Heading';
 import Image from 'common/components/Image';
 import Button from 'common/components/Button';
 import Container from 'common/components/UI/Container';
+import SectionWrapper from '../Features/features.style';
 
 import { ButtonWrapper } from '../../Podplug/Podplug.style';
 import { ActiveStatus } from './contact.style';
@@ -22,6 +23,7 @@ const ContactSection = ({
   buttonWrapper,
 }) => {
   return (
+    <SectionWrapper id="contact">
     <Box {...sectionWrapper} as="section">
       <Container noGutter mobileGutter width="1200px">
         <Box {...secTitleWrapper}>
@@ -52,6 +54,7 @@ const ContactSection = ({
         </Box>
       </Container>
     </Box>
+    </SectionWrapper>
   );
 };
 

@@ -177,7 +177,6 @@ export const VideoWrapper = styled.div`
   }
 `;
 export const CustomerWrapper = styled.div`
-  margin: -1% 0 0 0;
   width: 100%;
   display: flex;
   align-items: center;
@@ -187,25 +186,35 @@ export const CustomerWrapper = styled.div`
 
 
   @media only screen and (max-width: 3840px) {
-    padding: 55px 0 55px 25%;
+    padding: 25px 0 25px 32%;
+    margin: -1% 0 1% 0;
+
   }
 
   @media only screen and (max-width: 1920px) {
-    padding: 55px 0 55px 21%;
+    padding: 25px 0 20px 32%;
+    margin: -1% 0 1% 0;
+
   }
 
   @media only screen and (max-width: 1440px) {
-    padding: 55px 0 55px 21%;
+    padding: 20px 0 15px 21%;
+    margin: -1% 0 3% 0;
+
   }
   @media only screen and (max-width: 1099px) {
-    padding: 55px 0 55px;
+    padding: 12px 0 15px;
+    margin: -1% 0 4% 0;
+
   }
   @media only screen and (max-width: 991px) {
-    padding: 20px 0;
+    padding: 7px 0;
+    margin: -1% 0 3% 0;
+
   }
   @media only screen and (max-width: 600px) {
     margin: -2% 0 0 0;
-    padding: 5px 0;
+    padding: 10px 0;
   }
 
   p {
@@ -219,6 +228,17 @@ export const CustomerWrapper = styled.div`
 
 export const VideoBannerWrapper = styled.div`
 
+
+
+img{
+  opacity: 0.35;
+  filter: blur(5px);
+  filter: brightness(0.4);
+  filter: contrast(200%);
+  filter: drop-shadow(16px 16px 20px blue);
+  filter: hue-rotate(90deg);
+  filter: saturate(30%);
+}
 
 background-image: -moz-linear-gradient(
   139deg,
@@ -248,10 +268,11 @@ export const ImageWrapper = styled.div`
     margin: 0 auto;
   }
   img {
+    opacity: 0.75;
     margin: 0 12px;
+    max-height: 50px;
+    max-width: 70px;
     @media only screen and (max-width: 667px) {
-      max-height: 50px;
-      max-width: 70px;  
       margin: 5px 10px;
     }
   }
