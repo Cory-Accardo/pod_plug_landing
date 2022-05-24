@@ -90,9 +90,9 @@ const Navbar = () => {
         <MenuArea className={state.searchToggle ? 'active' : ''}>
           <ScrollSpyMenu className="menu" menuItems={navMenu} offset={-84} />
           {/* end of main menu */}
-
-          <a style={{boxShadow: '6px 6px 10px #A6319D'}} href={rewardLink}><Button title="Access Rewards" /></a>
+          <a style={{marginLeft:'15px'}} href={rewardLink}><Button title="Access Rewards" /></a>
         </MenuArea>
+
       </Container>
 
       {/* start mobile menu */}

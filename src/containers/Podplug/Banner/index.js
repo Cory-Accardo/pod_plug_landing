@@ -26,10 +26,6 @@ import { client } from 'common/data/Podplug';
 
 import microsoft from 'common/assets/image/Podplug/envato-icon.png';
 import bannerImg from 'common/assets/image/Podplug/banner2.png';
-import bannerGif from 'common/assets/image/Podplug/banner.gif';
-
-import videoBanner1 from 'common/assets/image/Podplug/video-1.png';
-import videoBanner2 from 'common/assets/image/Podplug/video-2.png';
 import circleBorder from 'common/assets/image/Podplug/shape.svg';
 // close button for modal
 const CloseModalButton = () => (
@@ -39,16 +35,6 @@ const CloseModalButton = () => (
     onClick={() => closeModal()}
     icon={<i className="flaticon-plus-symbol" />}
   />
-);
-
-const ModalContent = () => (
-  <VideoWrapper>
-    <iframe
-      title="Video"
-      src="https://www.youtube.com/embed/8ME-QAlW6Ww"
-      frameBorder="0"
-    />
-  </VideoWrapper>
 );
 
 const Banner = () => {

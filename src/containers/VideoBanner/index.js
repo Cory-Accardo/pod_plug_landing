@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import Image from 'next/image'
 import Container from 'common/components/UI/Container';
-import bannerGif from 'common/assets/image/Podplug/banner.gif';
 import { CustomerWrapper, ImageWrapper, VideoBannerWrapper } from '../Podplug/Banner/banner.style';
 import { client } from 'common/data/Podplug';
 import Text from 'common/components/Text';
@@ -15,35 +14,15 @@ const Banner = () => {
 
     const size = useWindowSize();
 
-
-    function determineSize(){
-        if(size.width < 450){
-            return{
-                width: (1920 * 2),
-                height: (1080 * 3.5)
-            }
-        }
-        if(size.width > 1920){
-            return {
-                width: (1920* 1.1),
-                height: 1080 * 1.1
-            }
-        }
-        else{
-            return {
-                width: 1920,
-                height: 1080
-            }
-        }
+    function videoComp() {
+        
+        if(size.width > 420) {return <video loop autoPlay muted style={{width:'100%', overflow:'hidden'}} src='banner(1080).mp4'/>}
+        else {return <video loop autoPlay muted style={{width:'100%', overflow:'hidden'}} src='banner(square).mp4'/>}
     }
-
-
-  
-
     return (
         <>
         <VideoBannerWrapper>
-        <Image width={determineSize().width} height={determineSize().height} src={bannerGif}/>
+            {videoComp()}
       </VideoBannerWrapper>
       <CustomerWrapper>
             <Text content="In collaboration with:" />

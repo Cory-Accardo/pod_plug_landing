@@ -55,12 +55,14 @@ const Features = () => {
     <>
       <SectionWrapper id="features">
         <SectionHeader>
+          <div style={{paddingTop: '5%'}}>
           <Fade up>
             <Heading as="h5" content={slogan} />
             <Heading content={title} />
           </Fade>
+          </div>
         </SectionHeader>
-        <div style={{ display: 'flex', flexDirection: 'column', flexWrap: 'nowrap', alignItems: 'center', width: '100%'}}>
+        <div style={{display: 'flex', flexDirection: 'column', flexWrap: 'nowrap', alignItems: 'center', width: '100%'}}>
           {shouldStartColor(1) ?
             <div style={coloredStyle}>
               <Fade right>
