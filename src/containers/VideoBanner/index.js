@@ -17,7 +17,7 @@ const Banner = () => {
     function videoComp() {
         
         if(size.width > 420) {return <video loop autoPlay muted style={{width:'100%', overflow:'hidden'}} src='banner(1080).mp4'/>}
-        else {return <video loop autoPlay muted style={{width:'100%', overflow:'hidden'}} src='banner(square).mp4'/>}
+        else {return <video loop autoPlay muted style={{right:'26%', position:'relative', width:'150%', overflow:'hidden'}} src='banner(square).mp4'/>}
     }
     return (
         <>

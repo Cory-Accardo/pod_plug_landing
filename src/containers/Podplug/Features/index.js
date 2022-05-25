@@ -80,13 +80,13 @@ const Features = () => {
 
           {shouldStartColor(2) ?
             <div style={coloredStyle}>
-              <Fade right>
+              <Fade left>
                 <Image width="672" height="378" src={featOne} />
               </Fade>
             </div>
             :
             <div>
-              <Fade right>
+              <Fade left>
                 <Image width="672" height="378" src={featOne} />
               </Fade>
             </div>
@@ -108,13 +108,13 @@ const Features = () => {
           }
           {shouldStartColor(4) ?
             <div style={coloredStyle}>
-              <Fade right>
+              <Fade left>
                 <Image width="672" height="378" src={featThree} />
               </Fade>
             </div>
             :
             <div>
-              <Fade right>
+              <Fade left>
                 <Image width="672" height="378" src={featThree} />
               </Fade>
             </div>
