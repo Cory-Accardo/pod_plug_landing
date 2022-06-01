@@ -7,10 +7,9 @@ import Image from 'common/components/Image';
 import Button from 'common/components/Button';
 import Container from 'common/components/UI/Container';
 import SectionWrapper from '../Features/features.style';
-
 import { ButtonWrapper } from '../../Podplug/Podplug.style';
 import { ActiveStatus } from './contact.style';
-import Author from 'common/assets/image/Podplug/avatar.png';
+import Author from 'common/assets/image/Podplug/ethan.jpg';
 
 const ContactSection = ({
   sectionWrapper,
@@ -24,36 +23,43 @@ const ContactSection = ({
 }) => {
   return (
     <SectionWrapper id="contact">
-    <Box {...sectionWrapper} as="section">
-      <Container noGutter mobileGutter width="1200px">
-        <Box {...secTitleWrapper}>
-          <Heading {...secTitle} content="Let’s Work Together" />
-          <Text
-            {...secDescription}
-            content="If you are a venue located in the U.S, we'd love to hear from you!"
-          />
-        </Box>
-        <Box {...replyWrapper}>
-          <ActiveStatus>
-            <Image src={Author?.src} alt="Author Avatar" />
-          </ActiveStatus>
-          <Heading
-            as="h4"
-            content="Reply time: within 1-2 working days"
-            {...replyTime}
-          />
-        </Box>
-        <Box {...buttonWrapper}>
-          <ButtonWrapper>
-            <Button
-              title="ethan@podplug"
-              className="portfolio_button"
-              {...buttonStyle}
+      <Box {...sectionWrapper} as="section">
+        <Container noGutter mobileGutter width="1200px">
+          <Box {...secTitleWrapper}>
+            <Heading {...secTitle} content="Let’s Work Together" />
+            <Text
+              {...secDescription}
+              content="If you are a venue located in the U.S, we'd love to hear from you!"
             />
-          </ButtonWrapper>
-        </Box>
-      </Container>
-    </Box>
+          </Box>
+          <Box {...replyWrapper}>
+            <ActiveStatus>
+              <Image src={Author?.src} alt="Author Avatar" />
+            </ActiveStatus>
+            <Heading
+              as="h4"
+              content="Reply time: within 1-2 working days"
+              {...replyTime}
+            />
+          </Box>
+          <Box {...buttonWrapper}>
+            <ButtonWrapper>
+              <Button
+              
+                href="mailto:ethan@podplug.com"
+                title="ethan@podplug.com"
+                className="portfolio_button"
+                {...buttonStyle}
+                onClick={(e) => {
+                  window.location.href = "mailto:ethan@podplug.com";
+                  e.preventDefault();  
+                }
+}
+              />
+            </ButtonWrapper>
+          </Box>
+        </Container>
+      </Box>
     </SectionWrapper>
   );
 };

@@ -122,9 +122,9 @@ export const features = {
 /* ------------------------------------ */
 // App slider data section
 /* ------------------------------------ */
-import appSlide1 from 'common/assets/image/Podplug/appSlider1.png';
-import appSlide2 from 'common/assets/image/Podplug/appSlider2.png';
-import appSlide3 from 'common/assets/image/Podplug/appSlider3.png';
+import appSlide1 from 'common/assets/image/Podplug/age_verif.png';
+import appSlide2 from 'common/assets/image/Podplug/process_pay.png';
+import appSlide3 from 'common/assets/image/Podplug/select_item.png';
 import userprofile from 'common/assets/image/Podplug/userprofile.png';
 import qrcode from 'common/assets/image/Podplug/qrcode.png';
 import handselect from 'common/assets/image/Podplug/handselect.png';
