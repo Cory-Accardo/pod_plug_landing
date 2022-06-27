@@ -8,14 +8,9 @@ import featThree from '../../../common/assets/image/Podplug/3. Partnership.png'
 import featFour from '../../../common/assets/image/Podplug/4. Onboarding.png'
 import featSix from '../../../common/assets/image/Podplug/6. Lifetime Expert Support.png'
 
+import Typewriter from 'typewriter-effect';
 
-import { mediaRecordOutline } from 'react-icons-kit/typicons/mediaRecordOutline';
-import { plus } from 'react-icons-kit/typicons/plus';
-import { starOutline } from 'react-icons-kit/typicons/starOutline';
-import Text from 'common/components/Text';
 import Heading from 'common/components/Heading';
-import Container from 'common/components/UI/Container';
-import FeatureBlock from 'common/components/FeatureBlock';
 import { SectionHeader } from '../Podplug.style';
 import SectionWrapper, { FeatureWrapper } from './features.style';
 
@@ -24,7 +19,7 @@ import useScrollPosition from '../../../common/hooks/useScrollPosition';
 import useWindowSize from '../../../common/hooks/useWindowSize';
 
 
-const coloredStyle = { display: 'flex', flexDirection: 'column', flexWrap: 'nowrap', alignItems: 'center', width: '100%', backgroundColor: '#F5F8FF', transition: 'all 0.9s ease-in-out'}
+const coloredStyle = { display: 'flex', flexDirection: 'column', flexWrap: 'nowrap', alignItems: 'center', width: '100%', backgroundColor: '#F5F8FF', transition: 'all 0.9s ease-in-out' }
 
 const Features = () => {
   const { slogan, title, items } = features;
@@ -32,6 +27,17 @@ const Features = () => {
 
   const { width } = useWindowSize();
   const viewPos = useScrollPosition();
+
+  const AnimationsForChaining = ["Convenience", "when", "out"]
+
+  const [animationIndex, setAnimationIndex] = useState(0)
+  const [animationType, setAnimationType] = useState(AnimationsForChaining[0])
+
+  const handleChainAnimation = () => {
+    setAnimationIndex(animationIndex + 1)
+    setAnimationType(selectedItems[animationIndex + 1])
+  }
+
 
 
   function shouldStartColor(picIdx) {
@@ -43,7 +49,7 @@ const Features = () => {
     const start = (intervalHeight * picIdx);
     const end = (intervalHeight * picIdx) + intervalHeight;
 
-    if (viewPos >= start && viewPos <= end && (shouldStartColor(picIdx-1) === false)) return true;
+    if (viewPos >= start && viewPos <= end && (shouldStartColor(picIdx - 1) === false)) return true;
 
     return false;
 
@@ -53,16 +59,36 @@ const Features = () => {
 
   return (
     <>
+
       <SectionWrapper id="features">
+
+
+        <div style={{ margin: 'auto', border: '2px solid', width: 'fit-content', fontFamily:'Heebo', fontSize: '30px', fontWeight: 'lighter'}}>
+          <Typewriter
+            onInit={(typewriter) => {
+              typewriter.typeString(`<strong> Convenience, when out </strong>`)
+                .callFunction(() => {
+                  console.log('String typed out!');
+                })
+                .pauseFor(2500)
+                .start();
+            }}
+          />
+        </div>
+
+
         <SectionHeader>
-          <div style={{paddingTop: '5%'}}>
-          <Fade up>
-            <Heading as="h5" content={slogan} />
-            <Heading content={title} />
-          </Fade>
+          <div style={{ paddingTop: '5%' }}>
+            <Fade up>
+              <Heading as="h5" content={slogan} />
+              <Heading content={title} />
+            </Fade>
           </div>
         </SectionHeader>
-        <div style={{display: 'flex', flexDirection: 'column', flexWrap: 'nowrap', alignItems: 'center', width: '100%'}}>
+
+
+
+        <div style={{ display: 'flex', flexDirection: 'column', flexWrap: 'nowrap', alignItems: 'center', width: '100%' }}>
           {shouldStartColor(1) ?
             <div style={coloredStyle}>
               <Fade right>
